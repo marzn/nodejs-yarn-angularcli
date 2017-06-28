@@ -1,11 +1,11 @@
-FROM node:alpine
+FROM node:8-alpine
 
 MAINTAINER Marcel
 
 VOLUME /app
 WORKDIR /app
 
-RUN apk add --no-cache --update build-base nodejs
+RUN apk add --no-cache --update build-base
 RUN yarn global add @angular/cli
 
 EXPOSE 4200
