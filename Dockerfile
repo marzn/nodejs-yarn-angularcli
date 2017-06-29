@@ -5,7 +5,8 @@ MAINTAINER Marcel
 VOLUME /app
 WORKDIR /app
 
-RUN apk add --no-cache --update build-base
+# node-sass requires build-base and python
+RUN apk add --no-cache --update build-base python
 RUN yarn global add @angular/cli
 
 EXPOSE 4200
